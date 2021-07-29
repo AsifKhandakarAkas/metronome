@@ -18,7 +18,7 @@ const secondClick = new Audio('click2.mp3');
 
 
 
-let bpm="160";
+let bpm=160;
 let beatsPerMeasure = 4;
 let count = 0;
 let running = false;
@@ -28,7 +28,8 @@ decreaseTempoBtn.addEventListener('click',()=> {
     if(bpm<=20) {return};
     bpm--;
     tempoDisplay.textContent = bpm;
-    tempoSlider.value = bpm;updateMetronome();
+    tempoSlider.value = bpm;
+    updateMetronome();
 }
 );
 increaseTempoBtn.addEventListener('click',()=> {
@@ -81,18 +82,18 @@ startStop.addEventListener('click', ()=> {
 
 function updateMetronome(){
     metronome.timeInterval = 60000/bpm;
-    if (bpm <= 24 ){tempoLebel='Very,very slow'};
-    if (bpm >23 && bpm <46 ){tempoLebel= 'Very slow'};
-    if (bpm >45 && bpm<60 ){tempoLebel='Slow'};
-    if (bpm >59 && bpm<65 ){tempoLebel='Rather slow and broad'};
-    if (bpm >64 && bpm<76 ){tempoLebel='Slighly faster'}
-    if (bpm >75 && bpm<110 ){tempoLebel='Walking pace'};
-    if (bpm >109 && bpm< 120 ){tempoLebel='Moderate'};
-    if (bpm >119 && bpm< 156 ){tempoLebel='Fast, quick and bright'};
-    if (bpm >155 && bpm<172 ){tempoLebel='Lively and fast'};
-    if (bpm >171 && bpm<176 ){tempoLebel='very fast'};
-    if (bpm >175 && bpm<200 ){tempoLebel='Very, very fast'};
-    if (bpm >=200 ){tempoLebel='Even faster than presto'}
+    if (bpm <= 24 ){tempoLebel1='Very,very slow'};
+    if (bpm >23 && bpm <46 ){tempoLebel1= 'Very slow'};
+    if (bpm >45 && bpm<60 ){tempoLebel1='Slow'};
+    if (bpm >59 && bpm<65 ){tempoLebel1='Rather slow and broad'};
+    if (bpm >64 && bpm<76 ){tempoLebel1='Slighly faster'}
+    if (bpm >75 && bpm<110 ){tempoLebel1='Walking pace'};
+    if (bpm >109 && bpm< 120 ){tempoLebel1='Moderate'};
+    if (bpm >119 && bpm< 156 ){tempoLebel1='Fast, quick and bright'};
+    if (bpm >155 && bpm<172 ){tempoLebel1='Lively and fast'};
+    if (bpm >171 && bpm<176 ){tempoLebel1='very fast'};
+    if (bpm >175 && bpm<200 ){tempoLebel1='Very, very fast'};
+    if (bpm >=200 ){tempoLebel1='Even faster than presto'}
     tempoLebel.textContent = tempoLebel1;
 }
 
